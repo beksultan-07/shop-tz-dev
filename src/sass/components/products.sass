@@ -1,0 +1,155 @@
+.products
+    &__title
+        color: #282828
+        font-size: 28px
+        font-weight: 600
+
+        span
+            color: #A9A9A9
+            font-size: 18px
+            font-weight: 400
+            margin: 0 0 0 8px
+
+    &__slide
+        width: 100%
+        height: 100%
+        border-radius: 40px
+        overflow: hidden
+        cursor: pointer
+        position: relative
+        transition: .3s
+        height: 700px
+
+        &__img
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+            &-wrap
+                overflow: hidden
+            &-heart
+                position: absolute
+                top: 15px
+                right: 15px
+
+        &__info
+            padding: 12px
+            &-title
+                margin: 12px 0
+                color: #282828
+                font-size: 18px
+                font-weight: 400
+            &-price
+                color: #282828
+                font-size: 24px
+                font-weight: 500
+                &-adaptive
+                    display: none
+
+            &__bottom
+                display: flex
+                align-items: center
+                justify-content: space-between
+                margin: 12px 0 0
+                &-btn
+                    cursor: pointer
+                    display: flex
+                    align-items: center
+                    padding: 8px 12px
+                    opacity: 0
+                    height: 0
+                    visibility: hidden
+                    overflow: hidden
+                    transition: opacity 0.5s ease, height 0.5s ease
+
+                    img
+                        margin: 0 8px 0 0
+
+            &__sizes
+                margin: 6px 0 0
+                display: grid
+                grid-template-columns: repeat(4, 1fr)
+                gap: 6px
+                opacity: 0
+                height: 0
+
+                visibility: hidden
+                overflow: hidden
+                transition: opacity 0.5s ease, height 0.5s ease
+
+                &-title
+                    color: #282828
+                    font-size: 16px
+                    font-weight: 400
+                    opacity: 0
+                    height: 0
+
+                    visibility: hidden
+                    overflow: hidden
+                    transition: opacity 0.5s ease, height 0.5s ease
+
+                &-btn
+                    color: #525252
+                    font-size: 16px
+                    font-weight: 500
+                    padding: 4px 6px
+                    line-height: calc(16 / 18 * 100%)
+                    border: none
+                    outline: none
+                    border-radius: 34px
+                    background: #EEE
+                    cursor: pointer
+
+                    &.active
+                        color: #2A5CF6
+                        border: 1px solid #2A5CF6
+                        background: #F5F8FF
+
+        &:hover, &.active
+            box-shadow: 10px -10px 34px 0px rgba(6, 52, 253, 0.12), 0px 10px 33px 0px rgba(0, 252, 222, 0.12), -10px 0px 33px 0px rgba(236, 52, 254, 0.12)
+            .products__slide__info__sizes, .products__slide__info__sizes-title,
+            .products__slide__info__bottom-btn
+                visibility: visible
+                opacity: 1
+                height: auto
+
+    .swiper-slide
+        width: 310px
+        padding: 0 0 30px
+
+    .swiper-button-prev
+        img
+            transform: rotate(180deg)
+        &:after
+            display: none
+    .swiper-button-next
+        &:after
+            display: none
+
+@media screen and (max-width: 893px)
+    .products
+        &__slide
+            height: 610px
+            border-radius: 24px
+            &__info
+                &-price
+                    display: none
+                    &-adaptive
+                        display: block
+                &__sizes, &__sizes__title, &__bottom-btn
+                    visibility: visible
+                    opacity: 1
+                    height: auto
+                &__sizes
+                    grid-template-columns: repeat(3, 1fr)
+
+                &__bottom
+                    width: 100%
+                    &-btn
+                        width: 100%
+                        justify-content: center
+
+                        span
+                            display: none
+        .swiper-slide
+            width: 180px

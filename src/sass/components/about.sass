@@ -1,0 +1,70 @@
+.about
+    margin: 120px 0 50px
+
+    &__content
+        display: flex
+        justify-content: space-between
+        align-items: center
+
+    &__info
+        max-width: 628px
+        flex: 1
+
+        &-title
+            color: #282828
+            font-size: 28px
+            font-weight: 600
+            margin: 0 0 24px
+
+        &-text
+            color: #282828
+            font-size: 18px
+            font-weight: 400
+            line-height: 140%
+            margin: 0
+
+    &__image-block
+        flex: 1
+        margin: 0 0 0 20px
+
+        &-title
+            color: #282828
+            font-size: 28px
+            font-weight: 600
+            display: none
+
+        &-wrap
+            max-width: 582px
+            min-width: 300px
+            width: 100%
+            height: 304px
+            border-radius: 40px
+            overflow: hidden
+        &-img
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+@media screen and (max-width: 850px)
+    .about
+        &__content
+            flex-direction: column
+            align-items: flex-start
+
+        &__info
+            order: 2
+            max-width: 100%
+            &-title
+                display: none
+
+        &__image-block
+            width: 100%
+            order: 1
+            margin: 12px 0
+
+            &-wrap
+                max-width: 100%
+                height: 144px
+
+            &-title
+                display: inline-block

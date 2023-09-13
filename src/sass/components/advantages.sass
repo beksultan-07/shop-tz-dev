@@ -1,0 +1,56 @@
+.advantages
+    margin: 20px 0 60px
+
+    &__list
+        padding: 0
+        margin: 0
+        list-style: none
+
+        display: flex
+        gap: 24px
+
+        &__item
+            border-radius: 40px
+            width: 100%
+            padding: 24px
+            height: 262px
+
+            &-1
+                background: url('../../img/advantages1.jpg') 0 0 / cover
+
+            &-2
+                background: url('../../img/advantages2.jpg') 0 0 / cover
+
+            &-3
+                background: url('../../img/advantages3.jpg') 0 0 / cover
+
+            &-4
+                background: url('../../img/advantages4.jpg') 0 0 / cover
+
+            &-5
+                background: url('../../img/advantages5.jpg') 0 0 / cover
+
+            &-title
+                color: #282828
+                font-size: 16px
+                font-weight: 500
+                margin: 0 0 8px 0
+
+            &-text
+                color: #525252
+                font-size: 14px
+                font-weight: 400
+
+    &-swiper
+        display: none !important
+
+    .swiper-slide
+        max-width: 237px
+
+@media screen and (max-width: 1101px)
+    .advantages
+        &__list
+            display: none
+
+        &-swiper
+            display: block !important
